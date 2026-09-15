@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "postgres-mcp"
+version = "0.1.0"
+description = "Universal read-only PostgreSQL MCP server for Antigravity IDE"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "psycopg[binary]>=3.1.0",
+    "sqlglot>=25.0.0",
+]
+
+[project.scripts]
+postgres-mcp = "postgres_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/postgres_mcp"]
