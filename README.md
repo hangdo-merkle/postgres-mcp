@@ -6,7 +6,9 @@ Exposes 8 tools to the agent so it can explore your database schema and run
 SELECT queries — without ever being able to mutate data.
 
 ---
-
+```
+note: for testing purpose only
+```
 ## Tools
 
 | Tool | Description |
